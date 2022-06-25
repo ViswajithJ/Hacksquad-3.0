@@ -9,7 +9,7 @@
     height: auto;
     padding: 5px;
     padding-left: 5px;
-    padding-bottom: 32.5%;
+    padding-bottom: 30.25%;
     margin: -10px;
     text-align: center;
     font-family: "Kanit";
@@ -24,9 +24,6 @@
 }
 
 .form{
-    padding-left: 30%;
-    padding-right: 30%;
     margin: 1%;
-    text-align: left;
     color: white;
 }
