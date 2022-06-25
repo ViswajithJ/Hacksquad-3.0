@@ -1,0 +1,27 @@
+.main{
+    background-image: url("images/forest_fire.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    padding-left: 5px;
+    padding-bottom: 35%;
+    margin: -10px;
+    border-style: solid;
+    border-color: red;
+    border-width: 5px;
+    text-align: center;
+}
+
+.header-text{
+    color: white;
+}
+
+.form{
+    padding-left: 30%;
+    padding-right: 30%;
+    margin: 1%;
+    text-align: left;
+}
