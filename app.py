@@ -9,7 +9,7 @@ model=pickle.load(open('model.pkl','rb'))
 
 @app.route('/')
 def hello_world():
-    return render_template("forest_fire.html")
+    return render_template("ffire.html")
 
 
 @app.route('/predict',methods=['POST','GET'])
@@ -22,9 +22,9 @@ def predict():
     output='{}'.format(prediction[0][1], 2)
     print(output)
     if output>str(0.5):
-        return render_template('forest_fire.html',pred='Your Forest is in Danger.\nProbability of fire occuring is {}'.format(output),bhai="kuch karna hain iska ab?")
+        return render_template('ffire.html',pred='Your Forest is in Danger.\nProbability of fire occuring is {}'.format(output),bhai="kuch karna hain iska ab?")
     else:
-        return render_template('forest_fire.html',pred='Your Forest is safe.\n Probability of fire occuring is {}'.format(output),bhai="Your Forest is Safe for now")
+        return render_template('ffire.html',pred='Your Forest is safe.\n Probability of fire occuring is {}'.format(output),bhai="Your Forest is Safe for now")
 
 
 if __name__ == '__main__':
