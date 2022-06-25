@@ -19,12 +19,13 @@ def predict():
     print(int_features)
     print(final)
     prediction=model.predict_proba(final)
-    output='{}'.format(prediction[0][1], 2)
+    probability=prediction[0][1]
+    output='{:.5f}'.format(probability)
     print(output)
-    if output>str(0.5):
-        return render_template('ffire.html',pred='Your Forest is in Danger.\nProbability of fire occuring is {}'.format(output),bhai="kuch karna hain iska ab?")
+    if probability>0.5:
+        return render_template('ffire.html',pred='Your Forest is in Danger.\nProbability of fire occuring is {}'.format(output))
     else:
-        return render_template('ffire.html',pred='Your Forest is safe.\n Probability of fire occuring is {}'.format(output),bhai="Your Forest is Safe for now")
+        return render_template('ffire.html',pred='Your Forest is safe.\n Probability of fire occuring is {}'.format(output))
 
 
 if __name__ == '__main__':
