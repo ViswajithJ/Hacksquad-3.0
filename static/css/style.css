@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
 
 .main{
-    background-image: url("images/forest_fire.jpg");
+    background-image: url("./static/css/Images/forest_fire.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     vertical-align: bottom;
     width: 100%;
     height: auto;
-    padding: 5px;
-    padding-left: 5px;
-    padding-bottom: 32.5%;
-    margin: -10px;
-    text-align: center;
+    /*padding: 5px;
+    padding-left: 5px;*/
+    padding-bottom: 30.25%;
+    /*margin: -10px;
+    text-align: center;*/
     font-family: "Kanit";
 }
-
+/*
 .header-text{
     color: white;
 }
@@ -24,9 +24,7 @@
 }
 
 .form{
-    padding-left: 30%;
-    padding-right: 30%;
     margin: 1%;
-    text-align: left;
     color: white;
 }
+*/
