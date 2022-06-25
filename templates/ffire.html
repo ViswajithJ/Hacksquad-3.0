@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Forest Fire Predictor</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="./static/css/style.css">
-    </head>
-    <body>
-        <div class="container-fluid main">
-            <div class="header ">
-                <div class="row"><div class="col-sm-10 col-md-8 col-lg-6 "><h2 class="text-white header-text">Forest Fire Predictor</h2></div></div>
-                <div class="row"><div class="col-sm-10 col-md-8 col-lg-6"><h3 class="text-white sub-header-text">Predict the % of Forest fire occurances</h3></div></div>
+    <title>Forest Fire Predictor</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid main">
+        <div class="header text-white col-sm-10 col-md-8 col-lg-6 offset-sm-1 offset-md-2 offset-lg-3 text-center">
+            <div class="row">
+                <div class="col-sm-10 col-md-8 col-lg-6 offset-sm-1 offset-md-2 offset-lg-3 text-center">
+                    <h2 class="text-white header-text">Forest Fire Predictor</h2>
+                </div>
             </div>
-            <!---- <div class="form">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <h3 class="text-white sub-header-text">Predict the probability of Forest fire occurances</h3>
+                </div>
+            </div>
+        </div>
+        <!---- <div class="form">
                 <form action="action_page.php">
                     <label for="temp">Temperature </label><br>
                     <input type="text" placeholder="Temperature in Celcius"><br>
@@ -26,33 +37,41 @@
                 </form>
             </div> -->
 
-            <form action='/predict' method="POST" class="col s12">
-                <div>
-                    <br>
-                </div>
-                <div class="position-relative">
-                <div class="input-group mb-3 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
-                  <label class="form-label col-sm-10 col-md-8 col-lg-6 text-white">Temperature</label>
-                  <input type="text" class="form-control" placeholder="Temperature in Celcius">
-                </div>
-                <div class="input-group mb-3 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
-                  <label class="form-label">Oxygen Content</label>
-                  <input type="text" class="form-control" placeholder="Oxygen content in ppm">
-                </div>
-                <div class="input-group mb-3 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
-                  <label class="form-label">Humidity %</label>  
-                  <input type="text" class="form-control" placeholder="Humidity %">
-                </div>
-                <button type="submit" class="btn btn-primary col-sm-4 col-md-3 col-lg-2 offset-sm-4 offset-md-4 offset-lg-4">Predict</button>
-                </div>
-              </form>
-
+        <form action='/predict' method="POST" class="col s12">
             <div>
-                <br><h4 align="center"><b>{{pred}}</b></h4>
+                <br>
             </div>
-        </div>
+            <div class="position-relative"></div>>
+            <div class=" mb-3 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+                <label class="form-label text-white">Temperature</label>
+                <div class="input-group mb-3"><input type="text" name="temp" class="form-control"
+                        placeholder="Temperature in Celcius"></div>
+            </div>
+            <div class=" mb-3 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+                <label class="form-label text-white">Oxygen Content</label>
+                <div class="input-group mb-3"><input type="text" name="oxy" class="form-control"
+                        placeholder="Oxygen content in ppm"></div>
+            </div>
+            <div class=" mb-3 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+                <label class="form-label text-white">Humidity %</label>
+                <div class="input-group mb-3"><input type="text" name="humid" class="form-control"
+                        placeholder="Humidity %"></div>
+            </div>
+            <div>
+                <button type="submit"
+                    class="btn btn-primary col-sm-4 col-md-3 col-lg-2 offset-sm-4 offset-md-4 offset-lg-4">Predict</button>
+            </div>
+            <div><br><br></div>
+            <div class="col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 text-center h1 text-white">
+                <p>{{pred}}</p>
+            </div>
+        </form>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
-    </body>
+</body>
+
 </html>
