@@ -1,6 +1,11 @@
 # Hacksquad-3.0
 Project for Hackquad 3.0: A Forest Fire Predictor
 
+# Description
+This is a machine learning project, that can predict the probability of occurance of forest fire events by analysing weather data and Oxygen Concentration
+in the atmosphere in a specific area.
+
+
 # Building
 Activate the virutal environment:
 
